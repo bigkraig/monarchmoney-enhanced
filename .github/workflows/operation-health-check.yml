@@ -17,6 +17,7 @@ env:
 
 jobs:
   operation-health:
+    timeout-minutes: 3
     runs-on: ubuntu-latest
     name: Test GraphQL Operation Health
 

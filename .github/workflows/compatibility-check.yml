@@ -15,6 +15,7 @@ env:
 
 jobs:
   field-completeness:
+    timeout-minutes: 5
     runs-on: ubuntu-latest
     name: Check Field Completeness
 
@@ -111,6 +112,7 @@ jobs:
           "
 
   response-structure:
+    timeout-minutes: 5
     runs-on: ubuntu-latest
     name: Check Response Structure
 
@@ -170,6 +172,7 @@ jobs:
           "
 
   create-issue-on-failure:
+    timeout-minutes: 5
     runs-on: ubuntu-latest
     name: Create Issue on Compatibility Failure
     needs: [field-completeness, response-structure]
