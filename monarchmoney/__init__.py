@@ -26,6 +26,7 @@ from .monarchmoney import (  # Legacy exceptions for backward compatibility
     MonarchMoneyEndpoints,
     RequestFailedException,
     RequireMFAException,
+    BalanceHistoryRow,
 )
 from .utils import (
     batch_items,
