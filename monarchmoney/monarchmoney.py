@@ -5276,8 +5276,6 @@ class MonarchMoney(object):
         file_part.set_content_disposition("form-data", name="files", filename=filename)
         file_part.headers["Content-Type"] = "text/csv"
 
-        print(f'{{"{filename}":"{account_id}"}}')
-
         json_part = mpwriter.append(f'{{"{filename}":"{account_id}"}}')
         json_part.set_content_disposition("form-data", name="account_files_mapping")
         json_part.headers["Content-Type"] = "application/json"
@@ -5318,8 +5316,6 @@ class MonarchMoney(object):
 
         if not csv_content:
             return ""
-
-        csv_content = [BalanceHistoryRow(row["date"], row["amount"], row["account_name"]) for row in csv_content]
 
         csv_string = StringIO()
         writer = csv.writer(csv_string)
